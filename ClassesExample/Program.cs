@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ClassesExample.Legos;
+using ClassesExample.Legos.Heads;
+using ClassesExample.Legos.Torsos;
+using System;
 
 namespace ClassesExample // Namespace // Used just like a component in React
 {
@@ -25,7 +28,19 @@ namespace ClassesExample // Namespace // Used just like a component in React
 
             Console.WriteLine(taffy);
 
-            Console.WriteLine("Hello World!"); // Method // Used to take an action
+
+            var myDogHead = new Dog();
+            var martinHead = new Bald();
+            var astronaught = new Astronaut();
+
+            var fitTorso = new FitTorso(2, Sex.Male, Legos.Colors.Freckles);
+            fitTorso.Crunch(12);
+
+            var minifigure = new Minifigure(martinHead, fitTorso);
+
+            minifigure.Greet();
+
+            Console.ReadLine();
         }
     }
 }

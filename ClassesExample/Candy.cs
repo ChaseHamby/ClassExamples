@@ -10,7 +10,7 @@ namespace ClassesExample
         public string Flavor { get; } // If property is public - the getter/setter are public unless specified
         public int Rating { get; private set; }
         public string Review { get; private set; }
-        public string Name { get; } 
+        public string Name { get; }
         public CandyType Type { get; }
 
 
@@ -25,11 +25,11 @@ namespace ClassesExample
             Name = name;
             Type = type;
         }
-        
+
         // Methods
         public void SetRating(int userRating) // accessability / return Type / name / parameter list
         {
-            if(userRating >= MinRatingValue && userRating <= MaxRatingValue) // between 1-10
+            if (userRating >= MinRatingValue && userRating <= MaxRatingValue) // between 1-10
             {
                 Rating = userRating;
             }
