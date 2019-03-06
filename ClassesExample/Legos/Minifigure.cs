@@ -8,14 +8,17 @@ namespace ClassesExample.Legos
 {
     class Minifigure
     {
+        public string Name { get; set; }
         public Head Head { get; set; }
         public Torso Body { get; set; }
-        //Legs
+        public Legs.Legs Legs { get; set; }
 
-        public Minifigure(Head head, Torso body)
+        public Minifigure(string name, Head head, Torso body, Legs.Legs legs)
         {
+            Name = name;
             Head = head;
             Body = body;
+            Legs = legs;
         }
 
         //public void Eat()
@@ -26,6 +29,7 @@ namespace ClassesExample.Legos
 
         public void Greet()
         {
+            Legs.Jump();
             Body.Wave();
             Head.Talk();
         }

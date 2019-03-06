@@ -1,5 +1,6 @@
 ﻿using ClassesExample.Legos;
 using ClassesExample.Legos.Heads;
+using ClassesExample.Legos.Legs;
 using ClassesExample.Legos.Torsos;
 using System;
 
@@ -32,11 +33,12 @@ namespace ClassesExample // Namespace // Used just like a component in React
             var myDogHead = new Dog();
             var martinHead = new Bald();
             var astronaught = new Astronaut();
+            var adamsLegs = new OrangeLegs(Length.Short);
 
             var fitTorso = new FitTorso(2, Sex.Male, Legos.Colors.Freckles);
             fitTorso.Crunch(12);
 
-            var minifigure = new Minifigure(martinHead, fitTorso);
+            var minifigure = new Minifigure("Adam", astronaught, fitTorso, adamsLegs);
 
             minifigure.Greet();
 
